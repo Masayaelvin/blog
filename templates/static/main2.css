@@ -1,0 +1,112 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.site-header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.site-header .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.site-header .navbar-toggler {
+    background-color: #007bff;
+    border: none;
+}
+
+.site-header .navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.site-header .navbar-nav {
+    margin-top: 10px;
+}
+
+.site-header .nav-item {
+    font-size: 1.2rem;
+    padding: 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Main content styles */
+.container {
+    padding: 20px 0;
+}
+
+.container .content-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container .content-section h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.container .content-section p {
+    font-size: 1.2rem;
+}
+
+.container .list-group {
+    margin-top: 20px;
+}
+
+.container .list-group-item {
+    background-color: #f8f9fa;
+    border: none;
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+
+/* Additional styling for specific elements */
+.navbar-dark .navbar-toggler-icon {
+    background-color: #ffffff;
+}
+
+.navbar-dark .navbar-toggler:focus, .navbar-dark .navbar-toggler:hover {
+    background-color: #0056b3;
+}
+
+/* Custom styles for specific elements with IDs */
+#main-content {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+#sidebar {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for specific elements with classes */
+.content-section .list-group-item {
+    background-color: #eaeaea;
+    border: none;
+    margin: 5px 0;
+}
+
+/* Custom styles for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
