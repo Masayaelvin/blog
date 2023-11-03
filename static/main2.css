@@ -17,11 +17,11 @@ body {
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
-    color: #ffffff;
+    color: #6ba9e2;
 }
 
 .site-header .navbar-toggler {
-    background-color: #007bff;
+    background-color: #40ff00;
     border: none;
 }
 
