@@ -1,8 +1,10 @@
+import os
 from flask import render_template, flash, url_for, redirect, request
 from f_blog.forms import RegistrationForm, LoginForm, UpdateAccountForm
 from f_blog.models import User, Post
 from f_blog import app, db, bcrypt
 from flask_login import login_user, current_user, logout_user, login_required
+import secrets
 posts = [
     {
         'author': 'Wayne wonder Asamba',
@@ -60,11 +62,22 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+def save_picture(form_picture):
+      random_hex = secrets.token_hex(8)
+      _ , f_ext = os.path.splitext(form_picture.filename)
+      picture_fn = random_hex + f_ext
+      picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)
+      form_picture.save(picture_path)
+      return picture_fn
+
 @app.route("/account", methods=['POST', 'GET'])
 @login_required
 def account():
       form = UpdateAccountForm()
       if form.validate_on_submit():
+            if form.picture.data:
+                  picture_file = save_picture(form.picture.data)
+                  current_user.image_file = picture_file
             current_user.username = form.username.data
             current_user.email = form.email.data
             db.session.commit()
