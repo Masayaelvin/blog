@@ -28,9 +28,11 @@ def create_app(config_class=config):
     from f_blog.users.routes import users
     from f_blog.posts.routes import posts
     from f_blog.main.routes import main
+    from f_blog.errors.handlers import errors
 
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
+    app.register_blueprint(errors)
 
     return app
